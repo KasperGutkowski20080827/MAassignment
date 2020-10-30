@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c496e1e-4c28-4b0f-97ff-06eaa18dee88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sample/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="8c496e1e-4c28-4b0f-97ff-06eaa18dee88" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,21 +107,49 @@
       <option name="project" value="LOCAL" />
       <updated>1604060316870</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created a simple main menu with empty methods">
+      <created>1604062139532</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604062139532</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
+    <MESSAGE value="Created a simple main menu with empty methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a simple main menu with empty methods" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1060" y="281" key="FileChooserDialogImpl" timestamp="1604060237617">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1060" y="281" key="FileChooserDialogImpl/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604060237617" />
-    <state x="872" y="272" key="Vcs.Push.Dialog.v2" timestamp="1604060341655">
+    <state width="2517" height="295" key="GridCell.Tab.0.bottom" timestamp="1604062212268">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="872" y="272" key="Vcs.Push.Dialog.v2/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604060341655" />
+    <state width="2517" height="295" key="GridCell.Tab.0.bottom/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
+    <state width="2517" height="295" key="GridCell.Tab.0.center" timestamp="1604062212268">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2517" height="295" key="GridCell.Tab.0.center/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
+    <state width="2517" height="295" key="GridCell.Tab.0.left" timestamp="1604062212268">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2517" height="295" key="GridCell.Tab.0.left/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
+    <state width="2517" height="295" key="GridCell.Tab.0.right" timestamp="1604062212268">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="2517" height="295" key="GridCell.Tab.0.right/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
+    <state x="872" y="272" key="Vcs.Push.Dialog.v2" timestamp="1604062206221">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="872" y="272" key="Vcs.Push.Dialog.v2/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062206221" />
+    <state x="1042" y="441" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1604062357356">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1042" y="441" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062357356" />
   </component>
 </project>
