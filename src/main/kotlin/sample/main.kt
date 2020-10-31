@@ -4,6 +4,11 @@ import mu.KotlinLogging
 
 private val log = KotlinLogging.logger {}
 
+var newsTitle = ""
+var newsDescription = ""
+var newsAuthor = ""
+val newsList = ArrayList<String>()
+
 fun main(args: Array<String>) {
     log.info { "Launching Placemark Console App" }
 
@@ -16,7 +21,7 @@ fun main(args: Array<String>) {
             2 -> updateNews()
             3 -> listAllNews()
             -1 -> println("Exiting App")
-            else -> println("Invalid Option")
+            else -> println("Invalid Option please enter a number for a menu")
         }
         println()
     } while (input != -1)
@@ -44,7 +49,19 @@ fun menu() : Int {
 }
 
 fun addNews(){
+    println("Add a news report")
+    print("Enter a news title: ")
+    newsTitle = readLine()!!
+    print("Enter a news description: ")
+    newsDescription = readLine()!!
+    print("Enter your author name or allias: ")
+    newsAuthor = readLine()!!
 
+    if(newsTitle.isNotEmpty() && newsDescription.isNotEmpty() && newsAuthor.isNotEmpty()){
+        newsList.add(newsTitle)
+        newsList.add(newsDescription)
+        newsList.add(newsAuthor)
+    }
 }
 
 fun updateNews() {
@@ -52,5 +69,6 @@ fun updateNews() {
 }
 
 fun listAllNews() {
-
+    print("All news available")
+    newsList.forEach({ log.info { "${it}" }})
 }

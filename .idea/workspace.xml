@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c496e1e-4c28-4b0f-97ff-06eaa18dee88" name="Default Changelist" comment="" />
+    <list default="true" id="8c496e1e-4c28-4b0f-97ff-06eaa18dee88" name="Default Changelist" comment="Created a simple main menu with empty methods">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sample/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sample/main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604062139532</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created a simple main menu with empty methods">
+      <created>1604062399110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604062399110</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,30 +134,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Created a simple main menu with empty methods" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="495" y="82" key="CommitChangelistDialog2" timestamp="1604062534359">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="495" y="82" key="CommitChangelistDialog2/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062534359" />
     <state x="1060" y="281" key="FileChooserDialogImpl" timestamp="1604060237617">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1060" y="281" key="FileChooserDialogImpl/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604060237617" />
-    <state width="2517" height="295" key="GridCell.Tab.0.bottom" timestamp="1604062212268">
+    <state width="2517" height="295" key="GridCell.Tab.0.bottom" timestamp="1604062566812">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="295" key="GridCell.Tab.0.bottom/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
-    <state width="2517" height="295" key="GridCell.Tab.0.center" timestamp="1604062212268">
+    <state width="2517" height="295" key="GridCell.Tab.0.bottom/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062566812" />
+    <state width="2517" height="295" key="GridCell.Tab.0.center" timestamp="1604062566812">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="295" key="GridCell.Tab.0.center/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
-    <state width="2517" height="295" key="GridCell.Tab.0.left" timestamp="1604062212268">
+    <state width="2517" height="295" key="GridCell.Tab.0.center/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062566812" />
+    <state width="2517" height="295" key="GridCell.Tab.0.left" timestamp="1604062566812">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="295" key="GridCell.Tab.0.left/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
-    <state width="2517" height="295" key="GridCell.Tab.0.right" timestamp="1604062212268">
+    <state width="2517" height="295" key="GridCell.Tab.0.left/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062566812" />
+    <state width="2517" height="295" key="GridCell.Tab.0.right" timestamp="1604062566812">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="295" key="GridCell.Tab.0.right/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062212268" />
-    <state x="872" y="272" key="Vcs.Push.Dialog.v2" timestamp="1604062206221">
+    <state width="2517" height="295" key="GridCell.Tab.0.right/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062566812" />
+    <state x="872" y="272" key="Vcs.Push.Dialog.v2" timestamp="1604062371110">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="872" y="272" key="Vcs.Push.Dialog.v2/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062206221" />
+    <state x="872" y="272" key="Vcs.Push.Dialog.v2/0.0.2560.1080/-2560.11.2560.1080@0.0.2560.1080" timestamp="1604062371110" />
     <state x="1042" y="441" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1604062357356">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
