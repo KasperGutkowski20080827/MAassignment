@@ -27,7 +27,8 @@ fun main(args: Array<String>) {
             1 -> addNews()
             2 -> updateNews()
             3 -> listAllNews()
-            4 -> deleteNews()
+            4 -> searchId()
+            5 -> deleteNews()
             -1 -> println(ANSI_BLACK +"Exiting App"+ ANSI_RESET)
             else -> println(ANSI_BLACK +"Invalid Option please enter a number for a menu"+ ANSI_RESET)
         }
@@ -45,7 +46,8 @@ fun menu() : Int {
     println(ANSI_GREEN + " 1. Add News Report" + ANSI_RESET)
     println(ANSI_BLUE + " 2. Update News Report" + ANSI_RESET)
     println(ANSI_YELLOW + " 3. List News" + ANSI_RESET)
-    println(ANSI_CYAN + " 4. Delete News by ID" + ANSI_RESET)
+    println(ANSI_PURPLE + " 4. List News by searching ID" + ANSI_RESET)
+    println(ANSI_CYAN + " 5. Delete News by ID" + ANSI_RESET)
     println(ANSI_RED + "-1. Exit" + ANSI_RESET)
     println()
     print(ANSI_BLACK +"Enter an integer : "+ ANSI_RESET)
@@ -120,8 +122,14 @@ fun deleteNews(){
     newsArray.remove(deleteNews)
 }
 
+fun searchId(){
+    println(ANSI_BLACK +"Enter ID: "+ ANSI_RESET)
+    var searchId = readLine()!!.toInt()
+    var searchNews = newsArray.find { item -> item.newsId == searchId }
+    println(searchNews)
+}
+
 fun listAllNews() {
     print(ANSI_BLACK +"All news available"+ ANSI_RESET)
     newsArray.forEach({ log.info { "${it}" } })
-
 }
