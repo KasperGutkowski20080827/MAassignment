@@ -4,10 +4,9 @@ import mu.KotlinLogging
 
 private val log = KotlinLogging.logger {}
 
-var newsTitle = ""
-var newsDescription = ""
-var newsAuthor = ""
-val newsList = ArrayList<String>()
+var news = News()
+var newsArray = ArrayList<News>()
+var count = 1
 
 fun main(args: Array<String>) {
     log.info { "Launching Placemark Console App" }
@@ -37,6 +36,7 @@ fun menu() : Int {
     println(" 1. Add News Report")
     println(" 2. Update News Report")
     println(" 3. List News")
+    println(" 4. Delete News by ID")
     println("-1. Exit")
     println()
     print("Enter an integer : ")
@@ -50,25 +50,62 @@ fun menu() : Int {
 
 fun addNews(){
     println("Add a news report")
+    print("Enter a news id: ")
+    news.newsId = count
+    count++
     print("Enter a news title: ")
-    newsTitle = readLine()!!
+    news.newsTitle = readLine()!!
     print("Enter a news description: ")
-    newsDescription = readLine()!!
+    news.newsDescription = readLine()!!
     print("Enter your author name or allias: ")
-    newsAuthor = readLine()!!
+    news.newsAuthor = readLine()!!
 
-    if(newsTitle.isNotEmpty() && newsDescription.isNotEmpty() && newsAuthor.isNotEmpty()){
-        newsList.add(newsTitle)
-        newsList.add(newsDescription)
-        newsList.add(newsAuthor)
+    if(news.newsTitle.isNotEmpty() && news.newsDescription.isNotEmpty() && news.newsAuthor.isNotEmpty()){
+        var myNews = News(news.newsId,news.newsTitle, news.newsDescription, news.newsAuthor)
+        newsArray.add(myNews)
     }
 }
 
 fun updateNews() {
-
+    println("Enter ID: ")
+    var updateId = readLine()!!.toInt()
+    var updateNews = newsArray.find { item -> item.newsId == updateId }
+    println("What do wish to update: ")
+    println("Press 1 to change the title of the news.")
+    println("Press 2 to change the description of the news.")
+    println("Press 3 to change the author name or allias of the news.")
+    println("Press 4 to go back")
+    if (updateNews != null) {
+        var choice = readLine()!!.toInt()
+        if (choice == 1) {
+            print("Enter a new news title: ")
+            var newNewsTitle = readLine()!!
+            if (newNewsTitle.isNotEmpty()) {
+                updateNews.newsTitle = newNewsTitle
+            }
+        }
+        if (choice == 2) {
+            print("Enter a new description: ")
+            var newNewsDescription = readLine()!!
+            if (newNewsDescription.isNotEmpty()) {
+                updateNews.newsDescription = newNewsDescription
+            }
+        }
+        if (choice == 3) {
+            print("Enter a new author name or allias: ")
+            var newNewsAuthor = readLine()!!
+            if(newNewsAuthor.isNotEmpty()){
+                updateNews.newsAuthor = newNewsAuthor
+            }
+        }
+        if(choice == 4){
+            menu()
+        }
+    }
 }
 
 fun listAllNews() {
     print("All news available")
-    newsList.forEach({ log.info { "${it}" }})
+    newsArray.forEach({ log.info { "${it}" }})
+
 }
