@@ -27,6 +27,7 @@ fun main(args: Array<String>) {
             1 -> addNews()
             2 -> updateNews()
             3 -> listAllNews()
+            4 -> deleteNews()
             -1 -> println(ANSI_BLACK +"Exiting App"+ ANSI_RESET)
             else -> println(ANSI_BLACK +"Invalid Option please enter a number for a menu"+ ANSI_RESET)
         }
@@ -110,6 +111,13 @@ fun updateNews() {
             menu()
         }
     }
+}
+
+fun deleteNews(){
+    println(ANSI_BLACK +"Enter ID: "+ ANSI_RESET)
+    var deleteId = readLine()!!.toInt()
+    var deleteNews = newsArray.find { item -> item.newsId == deleteId }
+    newsArray.remove(deleteNews)
 }
 
 fun listAllNews() {
