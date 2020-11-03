@@ -1,0 +1,14 @@
+[
+  {
+    "newsId": 1,
+    "newsTitle": "title",
+    "newsDescription": "des",
+    "newsAuthor": "au"
+  },
+  {
+    "newsId": 1779615392,
+    "newsTitle": "mynews title",
+    "newsDescription": "part tu",
+    "newsAuthor": "au"
+  }
+]

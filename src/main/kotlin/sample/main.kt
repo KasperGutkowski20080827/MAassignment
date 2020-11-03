@@ -1,12 +1,17 @@
 package sample
 
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import mu.KotlinLogging
+import kotlin.collections.ArrayList
 
 private val log = KotlinLogging.logger {}
 
+var newsJson = NewsJson()
+
 var news = News()
 var newsArray = ArrayList<News>()
-var count = 1
+
 const val ANSI_RESET = "\u001B[0m"
 const val ANSI_BLACK = "\u001B[30m"
 const val ANSI_RED = "\u001B[31m"
@@ -18,7 +23,6 @@ const val ANSI_CYAN = "\u001B[36m"
 
 fun main(args: Array<String>) {
     log.info { "Launching Placemark Console App" }
-
     var input: Int
 
     do {
@@ -42,6 +46,8 @@ fun menu() : Int {
     var option : Int
     var input: String? = null
 
+    newsJson.deserialize()
+
     println(ANSI_BLACK + "MAIN MENU" + ANSI_RESET)
     println(ANSI_GREEN + " 1. Add News Report" + ANSI_RESET)
     println(ANSI_BLUE + " 2. Update News Report" + ANSI_RESET)
@@ -61,9 +67,8 @@ fun menu() : Int {
 
 fun addNews(){
     println(ANSI_BLACK +"Add a news report"+ ANSI_RESET)
-    print(ANSI_BLACK +"Enter a news id: "+ ANSI_RESET)
-    news.newsId = count
-    count++
+    news.newsId = 1
+    //count++
     print(ANSI_BLACK +"Enter a news title: "+ ANSI_RESET)
     news.newsTitle = readLine()!!
     print(ANSI_BLACK +"Enter a news description: "+ ANSI_RESET)
@@ -73,26 +78,30 @@ fun addNews(){
 
     if(news.newsTitle.isNotEmpty() && news.newsDescription.isNotEmpty() && news.newsAuthor.isNotEmpty()){
         var myNews = News(news.newsId, news.newsTitle, news.newsDescription, news.newsAuthor)
-        newsArray.add(myNews)
+        //newsArray.add(myNews)
+        newsJson.create(myNews)
     }
 }
 
 fun updateNews() {
-    println("Enter ID: ")
+    println(ANSI_BLACK +"Enter ID: "+ ANSI_RESET)
     var updateId = readLine()!!.toInt()
-    var updateNews = newsArray.find { item -> item.newsId == updateId }
+    var updateNews = newsJson.findOne(updateId)
     println(ANSI_BLACK +"What do you wish to update: "+ ANSI_RESET)
     println(ANSI_GREEN+"Press 1 to change the title of the news."+ ANSI_RESET)
     println(ANSI_BLUE+"Press 2 to change the description of the news."+ ANSI_RESET)
     println(ANSI_PURPLE+"Press 3 to change the author name or allias of the news."+ ANSI_RESET)
     println(ANSI_RED +"Press 4 to go back"+ ANSI_RESET)
     if (updateNews != null) {
+        print(ANSI_BLACK +"Please enter your choice: "+ ANSI_RESET)
         var choice = readLine()!!.toInt()
         if (choice == 1) {
             print(ANSI_BLACK +"Enter a new news title: "+ ANSI_RESET)
             var newNewsTitle = readLine()!!
             if (newNewsTitle.isNotEmpty()) {
                 updateNews.newsTitle = newNewsTitle
+                newsJson.update(updateNews)
+                updateNews()
             }
         }
         if (choice == 2) {
@@ -100,6 +109,8 @@ fun updateNews() {
             var newNewsDescription = readLine()!!
             if (newNewsDescription.isNotEmpty()) {
                 updateNews.newsDescription = newNewsDescription
+                newsJson.update(updateNews)
+                updateNews()
             }
         }
         if (choice == 3) {
@@ -107,6 +118,8 @@ fun updateNews() {
             var newNewsAuthor = readLine()!!
             if(newNewsAuthor.isNotEmpty()){
                 updateNews.newsAuthor = newNewsAuthor
+                newsJson.update(updateNews)
+                updateNews()
             }
         }
         if(choice == 4){
@@ -125,11 +138,14 @@ fun deleteNews(){
 fun searchId(){
     println(ANSI_BLACK +"Enter ID: "+ ANSI_RESET)
     var searchId = readLine()!!.toInt()
-    var searchNews = newsArray.find { item -> item.newsId == searchId }
-    println(searchNews)
+    var searchItem = newsJson.findOne(searchId)
+    println(searchItem)
 }
 
 fun listAllNews() {
-    print(ANSI_BLACK +"All news available"+ ANSI_RESET)
-    newsArray.forEach({ log.info { "${it}" } })
+    println(ANSI_BLACK +"All news available"+ ANSI_RESET)
+    newsArray = newsJson.findAll() as ArrayList<News>
+    newsArray.forEach{
+        println(it)
+    }
 }
