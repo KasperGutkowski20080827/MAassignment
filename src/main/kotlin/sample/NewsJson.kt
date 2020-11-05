@@ -18,6 +18,7 @@ class NewsJson {
     val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
     var listType: Type? = object : TypeToken<ArrayList<News?>?>() {}.type
 
+    var myNews = mutableListOf<News>()
 
     fun generateRandomId(): Int {
         var myRandomId = Random().nextInt()
@@ -25,7 +26,6 @@ class NewsJson {
             myRandomId*(-1)
         return myRandomId
     }
-    var myNews = mutableListOf<News>()
 
     fun findAll(): MutableList<News> {
         return myNews
@@ -55,11 +55,12 @@ class NewsJson {
         serialize()
     }
 
-    fun delete(id: Int){
-        var foundNews = findOne(news.newsId!!)
-        if (foundNews != null) {
-
+    fun delete(newsToDelete: News){
+        //var foundNews = findOne(news.newsId!!)
+        if (newsToDelete != null) {
+            myNews.remove(newsToDelete)
         }
+        serialize()
     }
 
     private fun serialize() {

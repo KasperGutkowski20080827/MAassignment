@@ -132,7 +132,11 @@ fun deleteNews(){
     println(ANSI_BLACK +"Enter ID: "+ ANSI_RESET)
     var deleteId = readLine()!!.toInt()
     var deleteNews = newsArray.find { item -> item.newsId == deleteId }
-    newsArray.remove(deleteNews)
+    //newsArray.remove(deleteNews)
+    if (deleteNews != null) {
+        newsArray.remove(deleteNews)
+        newsJson.delete(deleteNews)
+    }
 }
 
 fun searchId(){
