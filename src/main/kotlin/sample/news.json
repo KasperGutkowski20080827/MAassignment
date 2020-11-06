@@ -1,8 +1,14 @@
 [
   {
-    "newsId": 1,
-    "newsTitle": "title",
-    "newsDescription": "des",
-    "newsAuthor": "au"
+    "newsId": 1003517060,
+    "newsTitle": "Cyberpunk 2077 realese date",
+    "newsDescription": "The newest reports are saying that the game will be pushed back",
+    "newsAuthor": "Jimmy"
+  },
+  {
+    "newsId": 1043251791,
+    "newsTitle": "The witcher 3",
+    "newsDescription": "The witcher 3 won the award for the best RPG game of the decade",
+    "newsAuthor": "Kasper"
   }
 ]

@@ -22,7 +22,7 @@ const val ANSI_PURPLE = "\u001B[35m"
 const val ANSI_CYAN = "\u001B[36m"
 
 fun main(args: Array<String>) {
-    log.info { "Launching Placemark Console App" }
+    log.info { "Launching Game News App the GNA" }
     var input: Int
 
     do {
@@ -38,7 +38,7 @@ fun main(args: Array<String>) {
         }
         println()
     } while (input != -1)
-    log.info { "Shutting Down GDC App" }
+    log.info { "Shutting Down GNA App" }
 }
 
 fun menu() : Int {
